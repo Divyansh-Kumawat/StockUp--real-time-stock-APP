@@ -15,7 +15,7 @@ const WatchlistSchema = new Schema<WatchlistItem>(
     addedAt: { type: Date, default: Date.now },
   },
   { timestamps: false }
-); 
+);  
 
 // Prevent duplicate symbols per user
 WatchlistSchema.index({ userId: 1, symbol: 1 }, { unique: true });

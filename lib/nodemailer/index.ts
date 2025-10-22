@@ -8,7 +8,7 @@ export const transporter = nodemailer.createTransport({
         pass: process.env.NODEMAILER_PASSWORD!,
     }
 })
-
+ 
 export const sendWelcomeEmail = async ({ email, name, intro }: WelcomeEmailData) => {
     const htmlTemplate = WELCOME_EMAIL_TEMPLATE
         .replace('{{name}}', name)
