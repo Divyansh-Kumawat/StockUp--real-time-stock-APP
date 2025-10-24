@@ -10,7 +10,8 @@
     "test:db": "node scripts/test-db.mjs",
     "typecheck": "tsc --noEmit",
     "predeploy": "npm run typecheck",
-    "deploy": "bash scripts/deploy.sh"
+    "deploy": "bash scripts/deploy.sh",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.10",
