@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
   // AWS Amplify specific configuration
   distDir: '.next',
   // Required for AWS Amplify
-  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://production.d6r1hwp4orqoq.amplifyapp.com' : undefined,
+  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://production.d1962xqzjjsqz.amplifyapp.com' : undefined,
   basePath: '',
   // Ensure environment variables are loaded
   env: {
