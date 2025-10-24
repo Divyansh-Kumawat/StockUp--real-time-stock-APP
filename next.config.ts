@@ -8,6 +8,15 @@ const nextConfig: NextConfig = {
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production'
+  },
+  // Allow deployment to AWS Amplify
+  generateBuildId: async () => {
+    return 'build-' + Date.now()
+  },
+  // Ensure environment variables are loaded
+  env: {
+    NODE_ENV: process.env.NODE_ENV,
+    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
   }
 };
 

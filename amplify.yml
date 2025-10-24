@@ -13,6 +13,9 @@ frontend:
     baseDirectory: .next
     files:
       - '**/*'
+      - ../.env.production
+      - ../next.config.ts
+      - ../package.json
   cache:
     paths:
       - node_modules/**/*
