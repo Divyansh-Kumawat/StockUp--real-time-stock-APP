@@ -3,21 +3,27 @@ frontend:
   phases:
     preBuild:
       commands:
-        - nvm use 18
-        - npm ci
         - node -v
         - npm -v
+        - npm ci
     build:
       commands:
+        - env | grep -e NODE_ENV -e NEXT_PUBLIC_API_URL || true
         - npm run build
         - echo "Build completed successfully!"
   artifacts:
     baseDirectory: .next
     files:
       - '**/*'
-      - ../.env.production
-      - ../next.config.ts
-      - ../package.json
+      - '../public/**/*'
+      - '../package.json'
+  customHeaders:
+    - pattern: '**/*'
+      headers:
+        - key: 'Cache-Control'
+          value: 'public, max-age=31536000, immutable'
+        - key: 'Strict-Transport-Security'
+          value: 'max-age=31536000; includeSubDomains'
   cache:
     paths:
       - node_modules/**/*
