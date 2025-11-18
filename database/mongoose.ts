@@ -7,7 +7,7 @@ declare global {
         conn: typeof mongoose | null;
         promise: Promise<typeof mongoose> | null;
     }
-}
+} 
 
 let cached = global.mongooseCache;
 

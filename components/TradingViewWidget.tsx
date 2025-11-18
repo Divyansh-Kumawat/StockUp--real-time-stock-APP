@@ -1,5 +1,5 @@
 'use client';
-
+ 
 import React, { memo } from 'react';
 import useTradingViewWidget from "@/hooks/useTradingViewWidget";
 import {cn} from "@/lib/utils";

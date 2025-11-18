@@ -16,7 +16,7 @@ const SelectField = ({ name, label, placeholder, options, control, error, requir
             <Controller
                 name={name}
                 control={control}
-                rules={{
+                rules={{ 
                     required: required ? `Please select ${label.toLowerCase()}` : false,
                 }}
                 render={({ field }) => (

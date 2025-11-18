@@ -23,3 +23,4 @@ const InputField = ({ name, label, placeholder, type = "text", register, error, 
     )
 }
 export default InputField
+  
